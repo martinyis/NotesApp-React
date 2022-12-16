@@ -1,12 +1,15 @@
 import { BiArrowToLeft } from 'react-icons/bi';
 
 const Back = function (props) {
-  const { changePage } = props;
+  const { changePage, addNote } = props;
   return (
     <BiArrowToLeft
       onClick={() => {
-        console.log('Clicked');
         changePage();
+        addNote?.(
+          JSON.parse(localStorage.getItem('data'))[0],
+          JSON.parse(localStorage.getItem('data'))[1]
+        );
       }}
       size="30"
     />

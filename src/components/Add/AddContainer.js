@@ -5,7 +5,7 @@ const AddContainer = function (props) {
   return (
     <div className="AddContainer">
       <div className="AddContainer__header">
-        <Back changePage={changePage} />
+        <Back info={info} addNote={addNote} changePage={changePage} />
         <p className="AddContainer__title">Untitled</p>
       </div>
       <AddNote

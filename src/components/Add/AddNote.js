@@ -1,10 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from '../UI/Button';
 const AddNote = function (props) {
-  const { page, changePage, addNote, info } = props;
+  const { page, changePage, addNote, info, takeData } = props;
   const [title, setTitle] = useState(info[0] !== undefined ? info[0] : '');
   const [content, setContent] = useState(info[1] !== undefined ? info[1] : '');
   const data = [title, content];
+  //constantly save data into localstortgae
+  useEffect(() => {
+    // storing input name
+    localStorage.setItem('data', JSON.stringify(data));
+    console.log(data);
+  }, [data]);
   return (
     <>
       <form action="" className="AddNote">

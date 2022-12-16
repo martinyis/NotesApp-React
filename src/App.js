@@ -7,6 +7,7 @@ function App() {
   const [page, setPage] = useState(0);
   const [notes, setNotes] = useState([]);
   const [info, setInfo] = useState([]);
+  const [searchValue, setSearchValue] = useState('');
   function generateDateString() {
     const date = new Date();
     const day = date.getDate();
@@ -36,11 +37,15 @@ function App() {
     setInfo([title, content]);
     setTimeout(() => setInfo([]), 1000);
   };
-
+  const onChangeSearchValue = (event) => {
+    setSearchValue(event.target.value);
+  };
   return (
     <div className="App">
       {page == 0 ? (
         <NotesContainer
+          onChangeSearchValue={onChangeSearchValue}
+          searchValue={searchValue}
           deleteNote={deleteNote}
           notes={notes}
           changePage={changePage}
