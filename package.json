@@ -1,6 +1,5 @@
 {
   "hostname": "https://martinyis.github.io/NotesApp-React",
-  "name": "99-template",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
