@@ -25,7 +25,6 @@ function App() {
         date: generateDateString(),
       },
     ]);
-    console.log(notes);
   };
   const changePage = () => {
     page === 0 ? setPage(1) : setPage(0);

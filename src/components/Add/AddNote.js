@@ -9,7 +9,6 @@ const AddNote = function (props) {
   useEffect(() => {
     // storing input name
     localStorage.setItem('data', JSON.stringify(data));
-    console.log(data);
   }, [data]);
   return (
     <>

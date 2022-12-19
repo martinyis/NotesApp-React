@@ -1,6 +1,5 @@
 const FindNoteForm = function (props) {
   const { searchValue, onChangeSearchValue } = props;
-  console.log(searchValue);
   return (
     <form className="findNoteForm" action="">
       <input
