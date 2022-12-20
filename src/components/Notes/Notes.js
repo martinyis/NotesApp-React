@@ -5,7 +5,7 @@ const Notes = function (props) {
     <div className="notes">
       {notes
         .filter((note) => {
-          const title = note.title;
+          const title = note.title.toLowerCase();
           return title.includes(searchValue);
         })
         .map((note) => {

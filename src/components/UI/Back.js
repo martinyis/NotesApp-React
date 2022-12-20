@@ -1,9 +1,10 @@
 import { BiArrowToLeft } from 'react-icons/bi';
-
+import classes from './Back.module.css';
 const Back = function (props) {
   const { changePage, addNote } = props;
   return (
     <BiArrowToLeft
+      className={classes.backBtn}
       onClick={() => {
         changePage();
         addNote?.(

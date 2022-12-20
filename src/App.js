@@ -25,6 +25,7 @@ function App() {
         date: generateDateString(),
       },
     ]);
+    // add note to local storage
   };
   const changePage = () => {
     page === 0 ? setPage(1) : setPage(0);
@@ -41,7 +42,7 @@ function App() {
   };
   return (
     <div className="App">
-      {page == 0 ? (
+      {page === 0 ? (
         <NotesContainer
           onChangeSearchValue={onChangeSearchValue}
           searchValue={searchValue}
